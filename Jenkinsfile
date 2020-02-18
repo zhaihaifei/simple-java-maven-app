@@ -24,8 +24,8 @@ pipeline {
         stage('Deliver') {
             steps {
 //                sh './jenkins/scripts/deliver.sh'
-                sh 'ping 172.16.34.70 -w 10'
-                sh 'mvn deploy'
+                sh 'ping 172.16.34.70 -w 3'
+                sh 'mvn deploy -e'
             }
         }
     }
